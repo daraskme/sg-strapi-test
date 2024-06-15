@@ -14,12 +14,15 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "develop": "nodemon --exec npm run start --watch api/ --watch config/ --watch plugins/",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "concurrently": "^7.2.2"
+  },
   "author": {
     "name": "A Strapi developer"
   },
@@ -29,7 +32,7 @@
     "starter": "@strapi/starter-gatsby-blog"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
+    "node": "16.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
